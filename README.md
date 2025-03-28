@@ -37,3 +37,14 @@ $ ls dist/
 Packaging uses [`setuptools-scm`](https://github.com/pypa/setuptools-scm), so the version of the software is based on git tags.
 
 To run the linting, we recommend `ruff`, a standard configuration is in the repo in `pyproject.toml`.
+
+# Releasing
+To release a new version of the package, you can create a pre-release from the main branch using GitHub UI, which will then trigger the release workflow. Alternatively, you can use the `gh` command line tool to create a release:
+
+```bash
+gh release create v[a.b.c] --prerelease --title "Kick starting the release"  --target main
+```
+
+
+# Contributing
+We welcome contributions to this project! If you have an idea for a new feature, bug fix, or improvement, please open an issue or submit a pull request. Before contributing, please read our [contributing guidelines](./CONTRIBUTING.md).

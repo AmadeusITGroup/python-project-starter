@@ -38,8 +38,11 @@ jobs:
       id: build_artifacts
       run: |
         python3 -m build
-        package_name=$(hatchling metadata name)
-        package_version=$(hatchling version)
+        # In case you decide to use chatchling with pyproject.toml only:
+        # package_name=$(hatchling metadata name)
+        # package_version=$(hatchling version)
+        package_name=$(python setup.py --name)
+        package_version=$(python setup.py --name)
         echo "package_name=$package_name" >> $GITHUB_OUTPUT
         echo "package_version=$package_version" >> $GITHUB_OUTPUT
     - name: Store the distribution packages
