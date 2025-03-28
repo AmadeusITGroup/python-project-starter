@@ -1,11 +1,3 @@
-[build-system]
-requires = ["setuptools>=71", "setuptools-scm>=8"]
-build-backend = "setuptools.build_meta"
-
-[tool.setuptools_scm]
-write_to = "package/_version.py"
-write_to_template = "__version__ = \"{version}\"\n"
-
 [tool.pytest.ini_options]
 minversion = "6.0"
 addopts = "--strict-markers --doctest-modules --doctest-glob='*.rst' --ignore=setup.py"
@@ -62,3 +54,38 @@ disallow_untyped_defs = "True"
 no_implicit_optional = "True"
 show_error_codes = "True"
 warn_unused_ignores = "True"
+
+# --- Buildsystem based on setuptools +  pyproject.toml : ---
+
+[build-system]
+requires = ["setuptools>=71", "setuptools-scm>=8"]
+build-backend = "setuptools.build_meta"
+
+
+[tool.setuptools_scm]
+write_to = "package/_version.py"
+write_to_template = "__version__ = \"{version}\"\n"
+
+
+# --- Alternative with hatchling with pyproject.toml only: ---
+#[project]
+#name = "Squarer"
+#dynamic = ["version"]
+
+#[build-system]
+#requires = ["hatchling>=1.24.2", "hatch-vcs>=0.3.0"]
+#build-backend = "hatchling.build"
+
+#[tool.hatch.version]
+#source = "vcs"
+
+#[tool.hatch.version.raw-options]
+#version_scheme = "python-simplified-semver"
+#local_scheme = "no-local-version"
+#parentdir_prefix_version = "v"
+#git_describe_command = ["git", "describe", "--dirty", "--tags", "--long", "--match", "v*"]
+
+#[tool.hatch.build.hooks.vcs]
+#version-file = "package/_version.py"
+
+# -------------------------------------------------------------
