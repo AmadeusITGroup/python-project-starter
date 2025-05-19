@@ -1,3 +1,6 @@
+Copyright (C) YEAR Amadeus s.a.s.
+See the end of the file for license conditions.
+
 # python-project-starter
 
 This is a template repo to act as a reference when starting up a new project in python. It consolidates best practices in regards to minimal level of documentation as well as the CI aspects.
@@ -118,3 +121,20 @@ gh release create v[a.b.c] --prerelease --title "Kick starting the release"  --t
 
 # Contributing
 We welcome contributions to this project! If you have an idea for a new feature, bug fix, or improvement, please open an issue or submit a pull request. Before contributing, please read our [contributing guidelines](./CONTRIBUTING.md).
+
+# License
+
+This file is part of PROJECT.
+
+PROJECT is free software: you can redistribute it and/or
+modify it under the terms of the Apache 2.0 License as published by
+the Apache Software Foundation.
+
+PROJECT is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the License
+for more details.
+
+You should have received a copy of the Apache 2.0 License
+along with PROJECT.
+If not, see <https://www.apache.org/licenses/LICENSE-2.0>.
